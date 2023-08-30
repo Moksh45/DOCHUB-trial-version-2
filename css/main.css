@@ -1,10 +1,10 @@
 :root {
-  --main-color: #F3FDE8;
-  --second-color: #5C8374;
+  --main-color: #831843;
+  --second-color: #FFC39C;
   --box-shadow: 0 0 5px rgb(33, 3, 3);
   --border-color: 1px solid #c3c3c361;
   --dark: #1f2022;
-  --light: rgb(0,128,128);
+  --light: rgb(30, 194, 194);
   --white: rgba(255, 255, 255, 0.925);
   --border-radius: 10px;
   --inputs-background: #121212;
@@ -30,7 +30,7 @@ body {
 }
 
 .home {
-  background-image: url(../assets/images/home5.jpg);
+  background-image: url(../assets/images/background.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

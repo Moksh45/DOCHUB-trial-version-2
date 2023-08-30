@@ -1,5 +1,5 @@
 window.CONTRACT = {
-  address: '0xcD75a08580A8900e73b82223956977d8f44E82ad',
+  address: '0xC1fFB00Ce2921b7f594396596C5077166c939f24',
   network: 'https://rpc-mumbai.maticvigil.com',
   explore: 'https://mumbai.polygonscan.com',
   abi: [
