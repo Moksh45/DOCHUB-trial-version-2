@@ -37,9 +37,8 @@
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <!-- <i class="fa-solid fa-dragon home_text"></i> -->
-        <img src="assets/images/icon.png"  height="60px">
-        <span class="home_text">Doc</span>
-        Hub
+        <img src="assets/images/icon.png" height="60px">
+        <span class="home_text">Doc</span>Hub
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,15 +49,15 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link active" href="upload.html">Upload</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="verify.html">Verify</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="delete.html">Delete</a>
-          </li>
+          </li> -->
 
           <li class="nav-item">
             <a class="nav-link" href="admin.html">Admin</a>
@@ -68,12 +67,16 @@
           </li>
         </ul>
         <div class="d-flex">
-          <button id="loginButton" onclick="connect()" class="btn main-button">
+          <button id="loginButton" onclick="connect()" class="btn btn-custom main-button">
             Login
           </button>
-          <button id="logoutButton" onclick="disconnect()" class="btn main-button">
+          <button id="logoutButton" onclick="disconnect()" class="btn btn-custom main-button">
             Logout
           </button>
+        </div>
+        <div class="d-flex">
+          <a href="register.html"><button style="margin-left: 15px;" id="registerButton"
+              class="btn btn-custom main-button">Register</button></a>
         </div>
       </div>
     </div>
@@ -170,11 +173,9 @@
         </div>
         <div class="col-md-6 item text">
           <h3>
-            <!-- <i class="fa-solid fa-dragon"></i> -->
-            <img src="assets/images/icon.png"  height="60px">
+            <img src="assets/images/icon.png" height="60px">
             DocHub
           </h3>
-          <!-- <a href="https://www.flaticon.com/free-icons/blockchain" title="blockchain icons">Blockchain icons created by photo3idea_studio - Flaticon</a> -->
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione illo doloribus adipisci?
           </p>
@@ -186,19 +187,13 @@
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
-      <p class="copyright">Dochub © 2022</p>
+      <p class="copyright">Dochub © 2023</p>
     </footer>
   </div>
 
   <!-- floating button -->
   <i onclick="topFunction()" id="scroll-btn" class="fa-solid fa-angle-up"></i>
 
-  <!-- contact us Button -->
-  <div>
-    <a href="mailto:xyz@gmail.com?subject=From Dochub Site">
-      <i class="mail-us fa-solid fa-headset"></i>
-    </a>
-  </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
