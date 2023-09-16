@@ -861,10 +861,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const fileInput = document.getElementById("doc-file");
 
   // Add a click event listener to the download button
-  downloadButton.addEventListener("click", function () {
-    // Trigger a click event on the file input
-    fileInput.click();
-  });
+  // downloadButton.addEventListener("click", function () {
+  //   // Trigger a click event on the file input
+  //   fileInput.click();
+  // });
 
   // Function to handle file input change (you may already have this function)
   // function get_Sha3() {
