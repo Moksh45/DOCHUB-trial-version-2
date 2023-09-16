@@ -1,31 +1,25 @@
 window.CONTRACT = {
-  address: '0xC1fFB00Ce2921b7f594396596C5077166c939f24',
+  address: '0xFf6a518cA14ae7CD2E540bea3a4A4b334bbbF63E',
   network: 'https://rpc-mumbai.maticvigil.com',
   explore: 'https://mumbai.polygonscan.com',
   abi: [
     {
-      "inputs": [],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "anonymous": false,
       "inputs": [
         {
-          "indexed": true,
           "internalType": "address",
-          "name": "_exporter",
+          "name": "_add",
           "type": "address"
         },
         {
-          "indexed": false,
           "internalType": "string",
-          "name": "_ipfsHash",
+          "name": "_info",
           "type": "string"
         }
       ],
-      "name": "addHash",
-      "type": "event"
+      "name": "add_Exporter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
       "inputs": [
@@ -54,24 +48,6 @@ window.CONTRACT = {
         },
         {
           "internalType": "string",
-          "name": "_info",
-          "type": "string"
-        }
-      ],
-      "name": "add_Exporter",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_add",
-          "type": "address"
-        },
-        {
-          "internalType": "string",
           "name": "_newInfo",
           "type": "string"
         }
@@ -82,6 +58,30 @@ window.CONTRACT = {
       "type": "function"
     },
     {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_exporter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_ipfsHash",
+          "type": "string"
+        }
+      ],
+      "name": "addHash",
+      "type": "event"
+    },
+    {
       "inputs": [
         {
           "internalType": "address",
@@ -90,6 +90,32 @@ window.CONTRACT = {
         }
       ],
       "name": "changeOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_add",
+          "type": "address"
+        }
+      ],
+      "name": "delete_Exporter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_hash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "deleteHash",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -118,32 +144,6 @@ window.CONTRACT = {
         }
       ],
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes32",
-          "name": "_hash",
-          "type": "bytes32"
-        }
-      ],
-      "name": "deleteHash",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_add",
-          "type": "address"
-        }
-      ],
-      "name": "delete_Exporter",
-      "outputs": [],
-      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -235,7 +235,7 @@ async function verify_Hash() {
     */
     await contract.methods
       .findDocHash(window.hashedfile)
-      .call({ from: window.userAddress})
+      .call({ from: window.userAddress })
       .then((result) => {
         console.log(result)
         $('.transaction-status').removeClass('d-none')

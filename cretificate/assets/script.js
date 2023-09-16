@@ -1,5 +1,5 @@
 //  Initializing variables
-var defaultCertPNG = "certificates/dummy.png";
+var defaultCertPNG = "./cretificate/certificates/dummy.png";
 var defaultFontSize = 20;
 var defaultFont = "Arial";
 var defaultColor = "black";
@@ -372,24 +372,24 @@ function updateDataset(dataname, value, mode = "w") {
   drawTextfromInputs();
 }
 
-let myStick = new JoystickController("stick", 64, 8);
-function loop() {
-  requestAnimationFrame(loop);
-  // Get current values
-  let x = myStick.value.x;
-  let y = myStick.value.y;
-  if (!(x == 0 && y == 0)) {
-    if (Math.abs(x - prevX) > 0.1) {
-      prevX = x;
-      updateDataset("x", x * 10, "a");
-    }
-    if (Math.abs(y - prevY) > 0.1) {
-      prevY = y;
-      updateDataset("y", y * 10, "a");
-    }
-  }
-}
-loop();
+// let myStick = new JoystickController("stick", 64, 8);
+// function loop() {
+//   requestAnimationFrame(loop);
+//   // Get current values
+//   let x = myStick.value.x;
+//   let y = myStick.value.y;
+//   if (!(x == 0 && y == 0)) {
+//     if (Math.abs(x - prevX) > 0.1) {
+//       prevX = x;
+//       updateDataset("x", x * 10, "a");
+//     }
+//     if (Math.abs(y - prevY) > 0.1) {
+//       prevY = y;
+//       updateDataset("y", y * 10, "a");
+//     }
+//   }
+// }
+// loop();
 //  On Window Resize event
 window.addEventListener("resize", function () {
   canvasOffset = canvas.getBoundingClientRect();
